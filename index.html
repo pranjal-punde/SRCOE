@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .dropdowncontent {
+            display: none;
+            font-size: small;
+        }
+        .link:hover .dropdowncontent {
+            display: block;
+            position: absolute;
+            background-color: pink;
+            width: 150px;
+            text-align: center;
+            padding-right: 35px;
+            height: fit-content;
+            font-size: medium;
+            font-style: italic;
+        }
+
+        .container {
+            display: grid;
+            border: 2px solid black;
+            grid-template-areas: "search search" 
+                                 "nav nav"
+                                 "vnav maincontent"
+                                 "footer footer";
+            height: 1000px;
+            grid-template-rows: 50px 50px auto 75px;
+            grid-template-columns: 0.5fr 5fr;
+            width: 100vw;
+        }
+
+        .search {
+            background-color: darkorchid;
+            grid-area: search;
+            text-align: center;
+        }
+        .nav {
+            background-color: purple;
+            grid-area: nav;
+        }
+        .vnav {
+            background-color: yellow;
+            grid-area: vnav;
+            height: 100%;
+        }
+        .maincontent {
+            background-color:plum;
+            grid-area: maincontent;
+            padding: 10px;
+            overflow: scroll;
+        }
+
+        .footer {
+            background-color: darkorchid;
+            grid-area: footer;
+            text-align: right;
+            padding: 9px;
+        }
+
+        .link {
+            text-align: center;
+            height: 50px;
+            width: 304px;
+            font-size: large;
+        }
+        .link1 {
+            text-align: center;
+            height: 76px;
+            width: 200px;
+            font-size: large;
+            background-color:palevioletred;
+        }
+        a {
+            text-decoration: none;
+        }
+        #id1 {
+            width: 300px;
+            height: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: yellow;
+        }
+        .link1:hover {
+            background-color: lightgrey;
+        }
+        #button1 {
+            width: 50px;
+            height: 35px;
+            border-radius: 10px;
+        }
+        #img1 {
+            border-radius: 9px;
+            margin-top: 10px;
+        }
+
+        /* Updated Grid Styles */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  
+            gap: 20px;  
+            justify-items: center;  
+            align-items: center;  
+            padding: 10px;  
+            display: none;
+        }
+
+        .card {
+            text-align: center;
+            border: 1px solid #ddd;  
+            border-radius: 8px;  
+            padding: 10px;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        }
+
+        .card img {
+            width: 100%;  
+            max-width: 250px;  
+            height: 200px;  
+            object-fit: cover;  
+            border-radius: 8px;  
+        }
+        #div{
+            background-color:darkorchid;
+            height: 200;
+            width: 1000;
+            text-align: center;
+            font-style: italic;
+            
+        }
+        .img1 {
+            padding: 5px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            
+            
+        }
+        .img1:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 15px purple; 
+          }
+        #div2{
+            background-color: whitesmoke;
+           
+
+        }
+        .img2 {
+            padding: 5px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;  
+            
+        }
+        .img2:hover:hover {
+            transform: scale(1.05); 
+            
+          }
+          .discount-text {
+            text-align: center;
+            font-size: large;
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;  
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  
+            gap: 20px;  
+            justify-items: center;  
+            align-items: center;  
+            padding: 10px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Search here" id="id1">
+            <button id="button1"><a href="#">Go</a></button>
+        </div>
+        <div class="nav">
+            <button class="link"><a href="#">Brands</a>
+                <div class="dropdowncontent">
+                    <ul type="none">
+                        <li>Lakme</li>
+                        <li>Sugar</li>
+                        <li>Oriflame</li>
+                        <li>M.A.C</li>
+                    </ul>
+                </div>
+            </button>
+            <button class="link"><a href="#">Categories</a></button>
+            <button class="link"><a href="#">Luxe</a>
+                <div class="dropdowncontent">
+                    <ul type="none">
+                        <li>Makeup</li>
+                        <li>Skin</li>
+                        <li>Hair</li>
+                        <li>Gifts</li>
+                        <li>Trending Now</li>
+                        <li>New Launches</li>
+                    </ul>
+                </div>
+            </button>
+            <button class="link"><a href="#">Fashion</a></button>
+            <button class="link"><a href="#">Beauty Advice</a></button>
+        </div>
+        <div class="vnav">
+            <button class="link1"><a href="">Makeup Products</a></button>
+            <button class="link1"><a href="">Skincare Products</a></button>
+            <button class="link1"><a href="">Hair Products</a></button>
+            <button class="link1"><a href="">Appliances</a></button>
+            <button class="link1"><a href="">Natural</a></button>
+            <button class="link1"><a href="">Bath & Body</a></button>
+            <button class="link1"><a href="#" id="fragranceButton">Fragrance</a></button>
+            <button class="link1"><a href="">Health & Wellness</a></button>
+            <button class="link1"><a href="">Accessories</a></button>
+            <button class="link1"><a href="">Mom & baby</a></button>
+            <button class="link1"><a href="">Sale</a></button>
+        </div>
+        <div class="maincontent">
+            <div id="div" ><h1>Top Brands</h1><br>
+                <a href="" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\lorial.jpeg" alt="" height="200" width="200"class="img1" ></a>
+                <a href="" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\ponds.jpeg" alt="" height="200" width="200" class="img1"></a>
+                <a href="" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\mac.jpeg" alt="" height="200" width="200" class="img1"></a>
+                <a href="" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\ny.jpeg" alt="" height="200" width="200" class="img1"></a>
+                <a href="" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\dove.jpeg" alt="" height="200" width="200" class="img1"></a>
+                <a href="" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\maybe.jpeg" alt="" height="200" width="200" class="img1"></a>
+
+            <br><br>
+            <div id="div2" ><h1>Celebrate Savings</h1><br>
+                <div class="grid">
+                
+                <div><a href="https://www.nykaa.com/brands/mamaearth/c/4320?transaction_id=3e8cf3c05a457b2544c72737e513181f&intcmp=nykaa:other:desktop-homepage:default:Gold_Banner:COLUMN_GRID_V2:40:Mamaearth:4320:3e8cf3c05a457b2544c72737e513181f" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\mamaearth.avif" alt="" height="250" width="200"class="img2" >
+                    <div class="discount-text">Flat 50% Off</div>On Entire Range!</a></div>
+                <div><a href="https://www.nykaa.com/brands/nykaa-skinrx/c/20478?transaction_id=cf7cd985ecaaadb2d660f14d375270f8&intcmp=nykaa:other:desktop-homepage:default:Gold_Banner:COLUMN_GRID_V2:40:Nykaa%20SKINRX:20478:cf7cd985ecaaadb2d660f14d375270f8" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\n1.avif" alt="" height="250" width="200" class="img2"><div class="discount-text">Flat 50% Off</div>On Entire Range</a></div>
+                <div><a href="https://www.nykaa.com/brands/mars/c/22013?transaction_id=2677027b6f2d80299b129223e88ac745&intcmp=nykaa:other:desktop-homepage:default:Gold_Banner:COLUMN_GRID_V2:40:MARS:22013:2677027b6f2d80299b129223e88ac745" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\mars.avif" alt="" height="250" width="200" class="img2"><div class="discount-text">Buy 1 Get 1 Free</div>On Bestsellers</a></div>
+                <div><a href="https://www.nykaa.com/brands/colourpop/c/32322?transaction_id=c834a948c8ce274b8b598c60f8387c12&intcmp=nykaa:other:desktop-homepage:default:Gold_Banner:COLUMN_GRID_V2:40:Colorpop:4130:c834a948c8ce274b8b598c60f8387c12" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\color.avif" alt="" height="250" width="200" class="img2"><div class="discount-text">Up To 50% Off</div>On Full Size!</a></div>
+                <div><a href="https://www.nykaa.com/brands/mcaffeine/c/4638?transaction_id=78139126f948c137e5e0fd7fb90325e4&intcmp=nykaa:other:desktop-homepage:default:Gold_Banner:COLUMN_GRID_V2:40:MCaffeine:4638:78139126f948c137e5e0fd7fb90325e4" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\c1.avif" alt="" height="250" width="200" class="img2"><div class="discount-text">Buy 1 Get 1 Free</div>On Bestsellers</a></div>
+                <div><a href="https://www.nykaa.com/dove-hair-collection/c/23641?intcmp=nykaa:other:desktop-homepage:default:Gold_Banner:COLUMN_GRID_V2:40:Dove:609:764f5fcdb8137625c05f60b266b12903&redirectpath=slug&transaction_id=764f5fcdb8137625c05f60b266b12903" target="_blank" ><img src="C:\Users\Pranjal Punde\Desktop\WhatsApp_files\d1.avif" alt="" height="250" width="200" class="img2"><div class="discount-text">Flat 50% Off</div>On Entire Range!</a></div>
+              </div>  
+            </div>
+            </div>
+            <div class="grid-container" id="mainContent">
+                <div class="card"><a href="#"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/bellavita.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href="#"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/fogg.jpeg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href="https://www.myflowertree.com/gucci-bloom-perfume-221?utm_source=Bing&utm_medium=CPC&utm_campaign=P_Max_Cake_Generic&msclkid=3a967ad5e369139db21b1d7060224cf4" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/gucci.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href="https://www.tirabeauty.com/product/yardley-london-autumn-bloom-compact-perfume-18ml-ffstosxlwy?msclkid=a84110f10f9417d202d277570274ec7a&utm_source=bing&utm_medium=cpc&utm_campaign=Tira_Shopping_Makeup&utm_term=4580771616297883&utm_content=Ad%20group%20%231" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/yard.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href=""><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/coco.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href=""><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/neea.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href="https://www.nykaaman.com/calvin-klein-eternity-aromatic-essence-for-women/p/14553745?ptype=product&skuId=14553743&utm_content=ads&utm_source=MicrosoftAds&utm_medium=SSC&utm_campaign=MS_SSC_Grooming_111124" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/calvin1.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href="https://www.amazon.in/Park-Avenue-Perfume-Euphoria-100ml/dp/B07845BYSZ/ref=pd_day0fbt_thbs_d_sccl_1/261-8854861-8665416?pd_rd_w=jjLtm&content-id=amzn1.sym.b2b0cd02-f8ee-412e-8ce3-7dec383b0c24&pf_rd_p=b2b0cd02-f8ee-412e-8ce3-7dec383b0c24&pf_rd_r=TBJ96B2YDVXRY3D27AZC&pd_rd_wg=LH7OZ&pd_rd_r=5e790637-dc94-490d-aa77-2609052ab82e&pd_rd_i=B07845BYSZ&th=1" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/per1.jpg" alt=""><br>Order Now</a></div>
+                <div class="card"><a href="https://www.amazon.in/Park-Avenue-Fragrance-Aromatic-Suitable/dp/B0DNTCMFRG/ref=pd_day0fbt_thbs_d_sccl_2/261-8854861-8665416?pd_rd_w=hOH8S&content-id=amzn1.sym.b2b0cd02-f8ee-412e-8ce3-7dec383b0c24&pf_rd_p=b2b0cd02-f8ee-412e-8ce3-7dec383b0c24&pf_rd_r=1GQQJ3C6MG1BSM9HG8MF&pd_rd_wg=gxBTl&pd_rd_r=fa048007-bf44-4bdc-89b5-538d3675aab8&pd_rd_i=B0DNTCMFRG&psc=1" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/per2.jpg" alt=""><br>Order Now</a></div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.instagram.com/pranjal_punde?igsh=aWFwams3cDExYXZ5" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/insta.jpeg" alt="" height="46" width="50" id="img1"></a>
+            <a href="https://www.linkedin.com/in/pranjal-punde-a1467027b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="C:/Users/Pranjal Punde/Desktop/WhatsApp_files/linkedIn.png" alt="" height="50" width="50"></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fragranceButton').addEventListener('click', function() {
+            const mainContent = document.getElementById('mainContent');
+            const div = document.getElementById('div');
+            if (mainContent.style.display === 'none' || mainContent.style.display === '') {
+                // Show the content of images
+                mainContent.style.display = 'grid';
+                div.style.display = 'none';  // Hide initial content
+            } else {
+                // Hide images and show initial content again
+                mainContent.style.display = 'none';
+                div.style.display = 'block';  // Show initial content
+            }
+        });
+    </script>
+</body>
+</html>
